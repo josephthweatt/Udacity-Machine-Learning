@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11849,7 +11849,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
@@ -11957,7 +11957,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -12054,8 +12054,8 @@ Model has a coefficient of determination, R^2, of 0.923.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> 0.922855648536
-Model has a coefficient of determination, R^2, of 0.923.</p>
+<p><strong>Answer:</strong>
+Model has a coefficient of determination, R^2, of 0.923. This means that 92.3% of variants in y_true can be predicted with their relation to y_predict. While it has not covered the entire variation of the target variable, it has certainly covered the most of it.</p>
 
 </div>
 </div>
@@ -12081,7 +12081,7 @@ Model has a coefficient of determination, R^2, of 0.923.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
@@ -12129,7 +12129,7 @@ Model has a coefficient of determination, R^2, of 0.923.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Splitting the dataset can help the learning algorithm test with data similar to the training data</p>
+<p><strong>Answer: </strong> Splitting the dataset can help the learning algorithm test with data similar to the training data. The learning algorithm learns from the training data and tests its knowledge on the testing data. The accuracy of the testing data indicates the effectiveness of the algorithm.</p>
 
 </div>
 </div>
@@ -13717,7 +13717,8 @@ PmOMMZ2KJT5jjDGdiiU+Y4wxnYolPmOMMZ2KJT5jjDGdyv8HW/tqlWulW94AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> At max_depth = 1, the model suffers from bias. At max_depth = 10, the model suffers from variance. This is because the depth indicates how tightly the algorithm will attempt to predict outcomes, and the graph shows the 'score' is weak where there is less complexity and diminishing as the max_depth becomes more complex than 3.</p>
+<p><strong>Answer: </strong> At max_depth = 1, the model suffers from bias. At max_depth = 10, the model suffers from variance. This is because the depth indicates how tightly the algorithm will attempt to predict outcomes. The graph shows the Validation Score is lower where there is less complexity than max_depth = 3 and, similarly, that the score diminishes as the max_depth becomes more complex than 3.</p>
+<p>The Validation Score is the only score that matters when trying to find a model of best fit, because that is the score which indicates the potential accuracy of the model when looking at new data.</p>
 
 </div>
 </div>
@@ -13789,7 +13790,7 @@ PmOMMZ2KJT5jjDGdiiU+Y4wxnYolPmOMMZ2KJT5jjDGdyv8HW/tqlWulW94AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> K-fold cross-validation is the process of splitting data into subgroups, selecting one subgroup to be the testing data, and changing out the testing data with another subgroup in the next run. This technique helps the grid search model because data can be reused to improve the accuracy of the model</p>
+<p><strong>Answer: </strong> K-fold cross-validation is the process of splitting data into subgroups, selecting one subgroup to be the testing data, and changing out the testing data with another subgroup in the next run. The score here is the mean of scores found from individual testing. This technique helps the grid search model to better asses the accuracy of each model, because having varying test and training data will lessen the likelihood that a model made accurate predictions by luck.</p>
 
 </div>
 </div>
@@ -14012,6 +14013,7 @@ Predicted selling price for Client 3&#39;s home: $946,470.00
 Predicted selling price for Client 1's home: $404,843.48</p>
 <p>Predicted selling price for Client 2's home: $195,416.67</p>
 <p>Predicted selling price for Client 3's home: $946,470.00</p>
+<p>These answers make sense. Juding by the feature values provided for each client, I can easily see which houses were more valuable than others, like a 8-bed house in a low poverty neighborhood compared to a 4-bed in a high poverty neighborhood. The prices seem to match the client's home value compared to the other clients.</p>
 
 </div>
 </div>
