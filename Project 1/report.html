@@ -12089,7 +12089,7 @@ Model has a coefficient of determination, R^2, of 0.923. This means that 92.3% o
 
 <span class="c1"># TODO: Shuffle and split the data into training and testing subsets</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">cross_validation</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span>
-    <span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Forgot to change &#39;0.1&#39;out to &#39;0.2&#39;</span>
 <span class="c1"># Success</span>
 <span class="k">print</span> <span class="s2">&quot;Training and testing split was successful.&quot;</span>
 </pre></div>
@@ -14013,7 +14013,9 @@ Predicted selling price for Client 3&#39;s home: $946,470.00
 Predicted selling price for Client 1's home: $404,843.48</p>
 <p>Predicted selling price for Client 2's home: $195,416.67</p>
 <p>Predicted selling price for Client 3's home: $946,470.00</p>
-<p>These answers make sense. Juding by the feature values provided for each client, I can easily see which houses were more valuable than others, like a 8-bed house in a low poverty neighborhood compared to a 4-bed in a high poverty neighborhood. The prices seem to match the client's home value compared to the other clients.</p>
+<p>These answers make sense. Juding by the feature values provided for each client, I can easily see which houses were more valuable than others.</p>
+<p>Each feature seems to have a linear relation with the price of a house. That is to say, house prices go up when the neighborhood poverty rate is lower, the local student-teacher ratio is lower, and the house has more bedrooms. House values would decline if those values were inverted.</p>
+<p>Using this assumption, one could see that the clients' values represented a certain ranking ('high, medium, low'  house prices) with one client having all values "better" than the other clients, one client having the "worst" values, and the last client having values in between the other two. Running their information through the model, we see that the value of the homes matched such a rank.</p>
 
 </div>
 </div>
