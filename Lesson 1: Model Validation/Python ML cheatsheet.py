@@ -22,6 +22,6 @@ clf2.fit(features_train,labels_train)
 print "GaussianNB has accuracy: ",accuracy_score(clf2.predict(features_test),labels_test)
 
 answer = { 
- "Naive Bayes Score": accuracy_score(clf1.predictpredict(features_test),labels_test, 
+ "Naive Bayes Score": accuracy_score(clf1.predict(features_test),labels_test, 
  "Decision Tree Score": accuracy_score(clf2.predictpredict(features_test),labels_test)
 }
