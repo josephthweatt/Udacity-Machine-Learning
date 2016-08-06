@@ -11,7 +11,7 @@ import matplotlib.dates as dates
 import matplotlib.pyplot as plt
 dates = map(lambda x: dates.datestr2num(x), all_data['Date'].tolist())
 closes = map(lambda x: int(x), all_data['Close'].tolist())
-coeffs = np.polyfit(dates, closes, 3)
+coeffs = np.polyfit(dates, closes, 10)
 function = np.poly1d(coeffs)
 plt.plot(dates, function(dates))
 plt.plot(dates, closes)
